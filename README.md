@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bug Tracker Dashboard
 
-## Getting Started
+A modern, responsive bug tracking application built with Next.js, TypeScript, and Tailwind CSS. This application helps teams manage and track bugs/tasks with features like time tracking, filtering, and statistical analysis.
 
-First, run the development server:
+## Tech Stack
 
+- Next.js 15
+- TypeScript
+- Tailwind CSS
+- shadcn/ui components
+- React Context API
+- Local Storage for data persistence
+- Recharts for data visualization
+
+## Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Devansh10Aga/Bug-Tracker
+cd bug-tracker
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install --force
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Start the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+## Authentication
 
-To learn more about Next.js, take a look at the following resources:
+The application uses a mock authentication system for demonstration purposes:
+- Any email/password combination will work
+- Login state persists through page refreshes using localStorage
+- Protected routes redirect to login page when accessed without authentication
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Usage
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Login**
+   - Use any email address
+   - Password must be at least 6 characters
 
-## Deploy on Vercel
+2. **Dashboard**
+   - View task statistics and charts
+   - Create new tasks
+   - Manage existing tasks
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **Task Management**
+   - Create tasks with title, description, priority, status, and assignee
+   - Edit existing tasks
+   - Delete tasks when completed
+   - Track time spent on tasks
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. **Filtering and Analysis**
+   - Filter tasks by status and priority
+   - View time distribution charts
+   - Analyze task distribution by assignee
+
+## Local Storage
+
+The application uses localStorage for:
+- User authentication state
+- Task data persistence
+- Application preferences
+
+## Assumptions
+
+1. **Authentication**
+   - Mock authentication is used for demonstration
+   - In a production environment, this would be replaced with a proper authentication system
+
+2. **Data Persistence**
+   - Local storage is used for simplicity
+   - In production, this would be replaced with a proper backend database
+
+3. **Performance**
+   - The application assumes a reasonable number of tasks
+   - Large datasets might require pagination or virtual scrolling
+
+   
+## Key Highlights
+
+- **User Authentication**
+  - Simple mock authentication system
+  - Protected routes
+  - Persistent login state
+
+- **Task Management**
+  - Create, edit, and delete tasks
+  - Priority and status tracking
+  - Assignee management
+  - Due date scheduling
+
+- **Time Tracking**
+  - Log time spent on tasks
+  - Track total time per task
+  - Time distribution analysis

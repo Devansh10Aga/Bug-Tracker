@@ -262,7 +262,7 @@ const TaskStats = ({ tasks }: { tasks: Task[] }) => {
         {/* Tasks by Due Date */}
         <Card>
           <CardHeader>
-            <CardTitle>Tasks by Due Date</CardTitle>
+            <CardTitle>Bugs by Due Date</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="h-64">
@@ -304,7 +304,7 @@ const TaskStats = ({ tasks }: { tasks: Task[] }) => {
         {/* Tasks by Assignee */}
         <Card>
           <CardHeader>
-            <CardTitle>Tasks by Assignee</CardTitle>
+            <CardTitle>Bugs by Assignee</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="h-64">
@@ -452,20 +452,20 @@ const BugTrackerDashboard = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle>Create New Task</CardTitle>
+          <CardTitle>Create New Bug</CardTitle>
         </CardHeader>
         <CardContent>
           <TaskForm
             task={newTask}
             onSubmit={handleCreateTask}
-            buttonText="Create Task"
+            buttonText="Create Bug"
           />
         </CardContent>
       </Card>
 
       <Card>
         <CardHeader className="flex flex-row items-center justify-between">
-          <CardTitle>Tasks</CardTitle>
+          <CardTitle>Bugs</CardTitle>
           <TaskFilters
             filterStatus={filterStatus}
             filterPriority={filterPriority}
@@ -558,13 +558,13 @@ const BugTrackerDashboard = () => {
       }}>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Edit Task</DialogTitle>
+            <DialogTitle>Edit Bug</DialogTitle>
           </DialogHeader>
           {editingTask && (
             <TaskForm
               task={editingTask}
               onSubmit={handleUpdateTask}
-              buttonText="Update Task"
+              buttonText="Update Bug"
             />
           )}
         </DialogContent>
